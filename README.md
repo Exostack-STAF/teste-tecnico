@@ -89,3 +89,64 @@ php artisan key:generate
 php artisan migrate --seed
 php artisan serve
 php artisan queue:work
+
+```
+
+
+## Instalação Rápida
+
+1. Clone o repositório:
+   ```bash
+   git clone <url-do-repositorio>
+   cd teste-tecnico
+   ```
+
+2. Instale as dependências:
+   ```bash
+   composer install
+   ```
+
+3. Configure o ambiente:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
+   
+4. Configure o banco de dados no arquivo `.env`
+
+5. Execute as migrações com seed:
+   ```bash
+   php artisan migrate --seed
+   ```
+
+6. Execute os testes:
+   ```bash
+   php artisan test
+   ```
+
+7. Inicie o servidor:
+   ```bash
+   php artisan serve
+
+
+   8. Execute o worker da fila:
+
+   php artisan queue:work
+
+   ```
+
+## Comandos Importantes
+
+- Migrar banco de dados com seed: `php artisan migrate --seed`
+- Executar todos os testes: `php artisan test`
+- Executar testes unitários: `php artisan test --testsuite=Unit`
+- Executar testes de funcionalidade: `php artisan test --testsuite=Feature`
+
+## Acesso
+
+Após iniciar o servidor, acesse `http://localhost:8000/admin` para acessar o painel administrativo.
+
+ 👉 "Se as seeds forem executadas, este login será criado:"
+
+'email' => 'test@example.com',
+'password' => 'password123',
